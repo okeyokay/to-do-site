@@ -1,0 +1,13 @@
+h1, .list {
+    text-align: center;
+    font-family: sans-serif;
+    color: #e8e8f1;
+}
+
+body {
+    background-color: #294C60
+}
+
+ul {
+    list-style-type: none;
+}

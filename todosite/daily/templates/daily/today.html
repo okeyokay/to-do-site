@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Tasks</title>
+    <link rel="stylesheet" href="{% static 'daily/style.css' %}">
+</head>
+<body>
+    {% if latest_tasks %}
+    <h1>Today's tasks!</h1>
+        <section>
+            <ul class="list">
+                {% for task in latest_tasks %}
+                <li>
+                    <h2>
+                        <input type="checkbox" id="item1">
+                        <label for="item1">{{ task.task_text }}</label>
+                    </h2>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% else %}
+        <h1>No tasks today!</h1>
+    {% endif %}
+</body>
+</html>
